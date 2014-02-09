@@ -402,11 +402,6 @@ public class PlainStreetEdge extends StreetEdge implements Cloneable {
             s1.incrementWalkDistance(length);
         }
         
-        if (s1.weHaveWalkedTooFar(options)) {
-            LOG.debug("Too much walking. Bailing.");
-            return null;
-        }
-        
         s1.addAlerts(notes);
         
         if (this.isToll() && traverseMode.isDriving()) {
